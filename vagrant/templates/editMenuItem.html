@@ -2,12 +2,12 @@
 <html lang="en" dir="ltr">
   <body>
     <h1>Edit Menu Item {{restaurant.name}}</h1>
-    <form action='#' method = 'post'>
+    <form action="{{url_for('editMenuItem', restaurant_id=restaurant.id, menu_id = item.id)}}" method = 'POST'>
         <p>Name</p>
           <input type="text" size='30' name='name' placeholder='{{item.name}}' />
           <input type="submit" value='Edit' />
 
-          <a href='#'>Cancel</a>
+          <a href="{url_for('restaurantMenu')}}">Cancel</a>
     </form>
 
   </body>
